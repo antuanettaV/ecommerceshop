@@ -1,0 +1,173 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  margin: 0;
+  color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e42daa;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+nav .logo img {
+  max-width: 150px;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 40px;
+}
+
+.search-form {
+  display: flex; 
+  align-items: center; 
+  margin-left: auto; 
+  margin-right: 20px; 
+}
+
+.search-form input {
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  width: 300px; 
+  transition: width 0.3s ease;
+}
+
+.search-form input:focus {
+  width: 200px; 
+}
+
+.search-form button {
+  background-color: #e42daa;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 6px;
+  margin-left: -30px; 
+  cursor: pointer;
+}
+
+.search-form button i {
+  font-size: 24px; 
+}
+
+nav .right {
+  display: flex;
+  gap: 30px; 
+  margin-right: 50px;
+  align-items: center;
+}
+
+nav .right a {
+  color: white; 
+}
+
+nav .right a i {
+  font-size: 28px; 
+}
+
+.products-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.product {
+  background-color: white;
+  padding: 15px;
+  border: 2px solid #ccc;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.product img {
+  width: 80%;
+  height: auto; 
+  max-height: 200px; 
+  object-fit: cover; 
+  border-radius: 5px;
+}
+
+.product h2 {
+  font-size: 1.2rem;
+}
+
+.product p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.product-footer {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  margin-top: auto; 
+}
+
+.product .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 5px; 
+}
+
+button {
+  border: none;
+  background-color: transparent; 
+  cursor: pointer;
+  font-size: 32px; 
+  color: black; 
+}
+
+footer {
+  text-align:center;
+  padding: 10px; 
+  background-color: #e42daa; 
+  color: #e9ebf1; 
+  border-radius: 10px; 
+  margin-top: 15px; 
+}
+
+@media (max-width: 768px) {
+  .products-container {
+      justify-content: center; 
+  }
+
+  .product {
+      width: 100%; 
+      max-width: 300px; 
+  }
+
+  .search-form input {
+      width: 80%; 
+  }
+
+  nav {
+      flex-direction: column; 
+  }
+
+  nav .right {
+      margin-top: 10px; 
+  }
+}
+
+footer nav .right a {
+  color: white; 
+}
+
+footer nav .right a i {
+  font-size: 24px; 
+}
