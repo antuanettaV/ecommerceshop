@@ -4,7 +4,7 @@ body {
     margin: 0;
     color: black;
     text-align: center;
-    padding: 0; 
+    padding: 0;
 }
 
 nav {
@@ -35,7 +35,8 @@ h1 {
 .product-container {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+    flex-wrap: wrap; 
     margin: 40px auto;
 }
 
@@ -55,7 +56,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     padding-left: 20px;
 }
 
@@ -67,25 +68,34 @@ h1 {
 }
 
 .product-container button {
-    background: #e42daa; 
-    color: white; 
+    background: #e42daa;
+    color: white;
     border: none;
     border-radius: 10px;
     padding: 15px 25px;
     font-size: 18px;
     cursor: pointer;
-    width: 200px; 
+    width: 200px;
     text-align: center;
 }
 
 .product-container button:hover {
-    background-color: #d02699; 
+    background-color: #d02699;
 }
 
 @media (max-width: 768px) {
     .product-container {
         flex-direction: column;
         align-items: center;
+        text-align: center;
+        
+    }
+
+    .product-container img {
+        max-width: 100%; 
+        margin-left: 50px;
+        margin-right: 5px; 
+        display: block;
     }
 
     .product-description {
@@ -95,9 +105,54 @@ h1 {
 
     .product-info {
         text-align: center;
+        padding-left: 0; 
     }
 
     .product-container button {
-        width:100%;
+        width: 100%;
+    }
+}
+
+footer {
+    padding: 10px;
+    background-color: #e120a4;
+    color: #e9ebf1;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .left p {
+    margin: 0;
+    color: white;
+}
+
+footer .right a {
+    color: white;
+    margin-left: 15px;
+    font-size: 30px;
+}
+
+footer .right a:hover {
+    color: #ccc;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    footer nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .right {
+        margin-top: 20px;
+    }
+
+    footer .right a {
+        font-size: 24px;
     }
 }

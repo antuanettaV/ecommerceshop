@@ -9,7 +9,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e42daa;
+  background-color: #e120a4;
   padding: 10px;
   border-radius: 10px;
 }
@@ -44,7 +44,7 @@ nav .logo img {
 }
 
 .search-form button {
-  background-color: #e42daa;
+  background-color: #e120a4;
   color: white;
   border: none;
   border-radius: 50%;
@@ -69,8 +69,22 @@ nav .right a {
 }
 
 nav .right a i {
-  font-size: 28px; 
+  font-size: 40px; 
 }
+
+header {
+  background-image: url('banner.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  height: 440px; 
+  width: 100%; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin-top: 0; 
+}
+
+
 
 .products-container {
   display: flex;
@@ -132,42 +146,29 @@ button {
   color: black; 
 }
 
+button:hover {
+  color: #e120a4; 
+ }
+
 footer {
-  text-align:center;
   padding: 10px; 
-  background-color: #e42daa; 
+  background-color: #e120a4; 
   color: #e9ebf1; 
   border-radius: 10px; 
   margin-top: 15px; 
 }
 
-@media (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 768px) {
   .products-container {
       justify-content: center; 
   }
 
-  .product {
-      width: 100%; 
-      max-width: 300px; 
-  }
-
-  .search-form input {
-      width: 80%; 
-  }
-
-  nav {
-      flex-direction: column; 
-  }
-
-  nav .right {
-      margin-top: 10px; 
-  }
-}
-
 footer nav .right a {
+  font-size: 30px;
   color: white; 
 }
 
 footer nav .right a i {
   font-size: 24px; 
+}
 }
