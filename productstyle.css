@@ -48,9 +48,9 @@ h1 {
 }
 
 .product-container img {
-    max-width: 400px;
+    max-width: 90%; 
     height: auto;
-}
+    }
 
 .product-info {
     display: flex;
@@ -88,19 +88,19 @@ h1 {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        
     }
 
     .product-container img {
         max-width: 100%; 
-        margin-left: 50px;
-        margin-right: 5px; 
-        display: block;
+        margin: 0 auto; 
+        display: block; 
     }
+    
 
     .product-description {
         text-align: center;
         margin-right: 0;
+        margin-bottom: 20px; 
     }
 
     .product-info {
@@ -109,7 +109,7 @@ h1 {
     }
 
     .product-container button {
-        width: 100%;
+        width: 100%; 
     }
 }
 
