@@ -8,10 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <title>E-commerce shop</title>
+    <script src="main.js" defer></script>
+    <title>E-commerce Shop</title>
 </head>
 <body>
-    <!--Navbar-->
+    
     <nav>
         <div class="left">
             <a href="index.html" class="logo">
@@ -29,62 +30,37 @@
         <div class="right">
             <a href="#home"><i class="fa-solid fa-house"></i></a>
             <a href="#shop"><i class="fa-solid fa-bag-shopping"></i></a>
-            <a href="#cart"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#cart" onclick="toggleCartModal()"><i class="fa-solid fa-cart-shopping"></i></a>
             <a href="#contact"><i class="fas fa-envelope"></i></a>
         </div>
     </nav>
+
     <header id="home"></header>
+
     <main id="shop">
-        <div class="products-container">
-            <div class="product">
-                <img src="product1.jpg" alt="product 1">
-                <h2><a href="product.html">Lancome La Vie Est Belle 75ml</a></h2>
-                <p>A fragrance with a powerful trail, with a perfect balance between the nobility of Iris, the depth of Patchouli, and an alluring Vanilla accord, creating the perfect scent of happiness.</p>
-                <div class="product-footer">
-                    <p class="price">637 dkk</p>
-                    <button>
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="product2.avif" alt="product 2">
-                <h2>Marc Jacobs Daisy Eau So Fresh Eau de Toilette 75ml</h2>
-                <p>The scent's enticing top notes of raspberry and grapefruit sparkle on the skin like sunshine, deepening into a sensuous heart of wild rose and a musky, sophisticated finish of warm plum and cedarwood.</p>
-                <div class="product-footer">
-                    <p class="price">408 dkk</p>
-                    <button>
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="product3.avif" alt="product 3">
-                <h2>Calvin Klein CK IN2U Her 100ml</h2>
-                <p>This iconic scent features the refreshing notes of Italian bergamot and zesty mandarin, complemented by the clean essence of green tea and sensual musk.</p>
-                <div class="product-footer">
-                    <p class="price">160 dkk</p>
-                    <button>
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="product4.jpg" alt="product 4">
-                <h2>Giorgio Armani Sì Women EDP 50 ml</h2>
-                <p>Sì has a top note of blackcurrant nectar, a heart of freesia and Rose of Mai, with a musky blond wood base.</p>
-                <div class="product-footer">
-                    <p class="price">639 dkk</p>
-                    <button>
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </button>
-                </div>
-            </div>
+        <div class="sort-dropdown">
+            <label for="sort-options">Sort Products: </label>
+            <select id="sort-options" onchange="handleSortChange(event)">
+                <option value="price-asc">Sort by Price (Low to High)</option>
+                <option value="price-desc">Sort by Price (High to Low)</option>
+                <option value="name-asc">Sort by Name (A-Z)</option>
+                <option value="name-desc">Sort by Name (Z-A)</option>
+            </select>
         </div>
+
+        <div class="products-container" id="products-container"></div>
+
+        <button id="buy-now-button" onclick="buyNow()">Buy Now</button>
     </main>
+
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="cart-total">Total: 0 dkk</p>
+            <button onclick="toggleCartModal()">Close</button>
+        </div>
+    </div>
 
     <footer id="contact">
         <nav>
@@ -93,13 +69,13 @@
             </div>
 
             <div class="right">
-                <a href="linkedin">
+                <a href="https://linkedin.com" target="_blank">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
-                <a href="facebook">
+                <a href="https://facebook.com" target="_blank">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
-                <a href="instagram">
+                <a href="https://instagram.com" target="_blank">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
             </div>
